@@ -180,7 +180,7 @@ private extension MoyaProvider {
     }
 
     private func sendRequest(target: Target, request: NSURLRequest, queue: dispatch_queue_t?, progress: Moya.ProgressBlock?, completion: Moya.Completion) -> CancellableToken {
-        let alamoRequest = manager.request(request)
+        let alamoRequest = manager.request(request).vaildate()
         return sendAlamofireRequest(alamoRequest, target: target, queue: queue, progress: progress, completion: completion)
     }
 
